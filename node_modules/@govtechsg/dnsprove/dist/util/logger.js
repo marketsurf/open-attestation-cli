@@ -1,0 +1,31 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getLogger = exports.error = exports.info = exports.trace = void 0;
+
+var _debug = _interopRequireDefault(require("debug"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+// not using .extends because of next.js resolve modules bug where its picking up old version of debug
+const trace = namespace => (0, _debug.default)(`dnsprove:trace:${namespace}`);
+
+exports.trace = trace;
+
+const info = namespace => (0, _debug.default)(`dnsprove:info:${namespace}`);
+
+exports.info = info;
+
+const error = namespace => (0, _debug.default)(`dnsprove:error:${namespace}`);
+
+exports.error = error;
+
+const getLogger = namespace => ({
+  trace: trace(namespace),
+  info: info(namespace),
+  error: error(namespace)
+});
+
+exports.getLogger = getLogger;
