@@ -5,12 +5,12 @@
     "url": "https://tutorial-renderer.openattestation.com"
   },
   "recipient": {
-    "name": "Sebastian"
+    "name": "Zayne Zheng Ze yuuu"
   },
   "issuers": [
     {
-      "name": "Marketsurf",
-      "documentStore": "0xCB5d2692760F9Ae20742d0908782359D42cd5FE3",
+      "name": "Demo Issuer",
+      "documentStore": "0x3a26c22B10556Ec112a10b1F4aBb6E733C342750",
       "identityProof": {
         "type": "DNS-TXT",
         "location": "sebastianyii.com"

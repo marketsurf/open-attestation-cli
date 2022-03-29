@@ -50,15 +50,14 @@ export const getWalletOrSigner = async ({
   //     ? new providers.JsonRpcProvider()
   //     : getDefaultProvider(network === "mainnet" ? "homestead" : network); // homestead => aka mainnet
   let provider;
+
   switch (network) {
     case "local":
       provider = new providers.JsonRpcProvider();
       break;
     case "fuji":
-      console.log("hely");
       provider = new providers.JsonRpcProvider("https://api.avax-test.network/ext/bc/C/rpc", 43113);
       break;
-
     default:
       provider = getDefaultProvider(network === "mainnet" ? "homestead" : network);
       break;
@@ -68,6 +67,7 @@ export const getWalletOrSigner = async ({
     const { password } = await inquirer.prompt({ type: "password", name: "password", message: "Wallet password" });
 
     const file = await readFile(options.encryptedWalletPath);
+
     const wallet = await ethers.Wallet.fromEncryptedJson(file, password, progress);
     signale.info("Wallet successfully decrypted");
     return wallet.connect(provider);

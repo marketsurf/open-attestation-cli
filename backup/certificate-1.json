@@ -5,15 +5,15 @@
     "url": "https://tutorial-renderer.openattestation.com"
   },
   "recipient": {
-    "name": "Zayne Zheng Ze yuuu"
+    "name": "Sebastian"
   },
   "issuers": [
     {
-      "name": "Demo Issuer",
-      "documentStore": "0x42bca8a4f1f8499c0756d630277bf2d84bee08d4",
+      "name": "Issued by Sebastian",
+      "documentStore": "0x3a26c22B10556Ec112a10b1F4aBb6E733C342750",
       "identityProof": {
         "type": "DNS-TXT",
-        "location": "few-green-cat.sandbox.openattestation.com"
+        "location": "sebastianyii.com"
       }
     }
   ]

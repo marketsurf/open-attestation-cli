@@ -21,6 +21,7 @@ yarn
 `yarn dev dns txt-record create --address "Address of the DocumentStore Contract" --network-id 43113`
 
 > Can run but might not be working right. (WIP)
+> Seems like their code don't work with the Avalanche Network.
 
 DNS used to create the Proof
 
@@ -49,7 +50,7 @@ Replace with the necessary field
       "documentStore": "0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b",
       "identityProof": {
         "type": "DNS-TXT",
-        "location": "few-green-cat.sandbox.openattestation.com"
+        "location": "sebastianyii.com"
       }
     }
   ]

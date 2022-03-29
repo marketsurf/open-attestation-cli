@@ -1,0 +1,105 @@
+{
+  "network": "homestead",
+  "wallet": {
+    "type": "ENCRYPTED_JSON",
+    "encryptedJson": "{\"address\":\"60d1b8ee563a849e9482a8fb34ac211b394cbb1a\",\"id\":\"22daa003-f394-494f-b3d2-cc9bdfd14df3\",\"version\":3,\"Crypto\":{\"cipher\":\"aes-128-ctr\",\"cipherparams\":{\"iv\":\"d343407b90ddb0f348a41cff9e62ca95\"},\"ciphertext\":\"97564a6efdb342e450a83835970350ffcd9298baa6424f860217d4d05fc71a49\",\"kdf\":\"scrypt\",\"kdfparams\":{\"salt\":\"99e5f5955eefc19b8171f5d69728deeab77665d80c9dec3ad251442eb5201f98\",\"n\":131072,\"dklen\":32,\"p\":1,\"r\":8},\"mac\":\"df869e2bc26be5ef97ecde32ad4fba7dddfb9084a49c26aae65d6c0000526f7a\"},\"x-ethers\":{\"client\":\"ethers.js\",\"gethFilename\":\"UTC--2022-01-28T06-49-26.0Z--60d1b8ee563a849e9482a8fb34ac211b394cbb1a\",\"mnemonicCounter\":\"df275d6977d114ed8514f4c1c1f77c34\",\"mnemonicCiphertext\":\"f799eb95fea6b5b17c54a8cfaa5d853e\",\"path\":\"m/44'/60'/0'/0/0\",\"locale\":\"en\",\"version\":\"0.1\"}}"
+  },
+  "forms": [
+    {
+      "name": "Bill of Lading",
+      "type": "TRANSFERABLE_RECORD",
+      "defaults": {
+        "$template": {
+          "type": "EMBEDDED_RENDERER",
+          "name": "BILL_OF_LADING_GENERIC",
+          "url": "https://generic-templates.tradetrust.io"
+        },
+        "issuers": [
+          {
+            "identityProof": {
+              "type": "DNS-TXT",
+              "location": "sebastianyii.com"
+            },
+            "name": "DEMO TOKEN REGISTRY",
+            "tokenRegistry": "0x50330890b40B3e4fae1D6a3C49E2AC3448E793D8"
+          }
+        ],
+        "blNumber": "<BL Number>",
+        "companyName": "<Company Name>",
+        "field1": "<Field1 text>",
+        "field2": "<Field2 text>",
+        "field3": "<Field3 text>",
+        "field4": "<Field4 text>",
+        "field5": "<Field5 text>",
+        "field6": "<Field6 text>",
+        "field7": "<Field7 text>",
+        "field8": "<Field8 text>",
+        "field9": "<Field9 text>"
+      },
+      "uiSchema": {
+        "logo": {
+          "ui:widget": "file"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "required": ["blNumber"],
+        "properties": {
+          "blNumber": {
+            "type": "string",
+            "title": "BL Number"
+          },
+          "logo": {
+            "title": "Logo",
+            "type": "string"
+          },
+          "companyName": {
+            "title": "Company Name",
+            "type": "string"
+          },
+          "field1": {
+            "title": "Field1",
+            "type": "string"
+          },
+          "field2": {
+            "title": "Field2",
+            "type": "string"
+          },
+          "field3": {
+            "title": "Field3",
+            "type": "string"
+          },
+          "field4": {
+            "title": "Field4",
+            "type": "string"
+          },
+          "field5": {
+            "title": "Field5",
+            "type": "string"
+          },
+          "field6": {
+            "title": "Field6",
+            "type": "string"
+          },
+          "field7": {
+            "title": "Field7",
+            "type": "string"
+          },
+          "field8": {
+            "title": "Field8",
+            "type": "string"
+          },
+          "field9": {
+            "title": "Field9",
+            "type": "string"
+          }
+        }
+      },
+      "attachments": {
+        "allow": true
+      },
+      "extension": "tt",
+      "fileName": "ebl-<%= blNumber %>"
+    }
+  ]
+}

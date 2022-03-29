@@ -5,12 +5,12 @@
     "url": "https://tutorial-renderer.openattestation.com"
   },
   "recipient": {
-    "name": "Sebastian"
+    "name": "Zayne"
   },
   "issuers": [
     {
-      "name": "Marketsurf",
-      "documentStore": "0xCB5d2692760F9Ae20742d0908782359D42cd5FE3",
+      "name": "Sebastian",
+      "tokenRegistry": "0x50330890b40B3e4fae1D6a3C49E2AC3448E793D8",
       "identityProof": {
         "type": "DNS-TXT",
         "location": "sebastianyii.com"

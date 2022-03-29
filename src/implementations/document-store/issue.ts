@@ -33,6 +33,8 @@ export const issueToDocumentStore = async ({
   await documentStore.callStatic.issue(hash, {
     gasPrice: gasPrice.mul(gasPriceScale),
   });
+  console.info("I am after document store");
+
   const transaction = await documentStore.issue(hash, {
     gasPrice: gasPrice.mul(gasPriceScale),
   });

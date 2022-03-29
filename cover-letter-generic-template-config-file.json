@@ -1,0 +1,74 @@
+{
+  "network": "ropsten",
+  "wallet": {
+    "type": "ENCRYPTED_JSON",
+    "encryptedJson": "{\"address\":\"9d5e99ad9fed24f0e40d40f70ee05609b85d57f0\",\"id\":\"deb04a72-881d-49d4-bcfe-2c98a2d61b2b\",\"version\":3,\"Crypto\":{\"cipher\":\"aes-128-ctr\",\"cipherparams\":{\"iv\":\"4ae48b10f9070e476590175214043150\"},\"ciphertext\":\"78e94c1065139eb7205413cac74a3d24a056169caed53ab795d536d73436f7e2\",\"kdf\":\"scrypt\",\"kdfparams\":{\"salt\":\"0130665a5f4042e252c1c618b5ec04e228f2bb2b61693e172f30b42fb5452d4b\",\"n\":131072,\"dklen\":32,\"p\":1,\"r\":8},\"mac\":\"3c07f0d1f6e22a11b7861e255712cf7184138a480d4a0f757ac31c7bdbb9b860\"},\"x-ethers\":{\"client\":\"ethers.js\",\"gethFilename\":\"UTC--2022-03-21T08-04-34.0Z--9d5e99ad9fed24f0e40d40f70ee05609b85d57f0\",\"mnemonicCounter\":\"fc241570caeff0a508c220135b3df73a\",\"mnemonicCiphertext\":\"6d883be3895b62bac66392b27e05f8c9\",\"path\":\"m/44'/60'/0'/0/0\",\"locale\":\"en\",\"version\":\"0.1\"}}"
+  },
+  "forms": [
+    {
+      "name": "Covering Letter",
+      "type": "VERIFIABLE_DOCUMENT",
+      "defaults": {
+        "$template": {
+          "type": "EMBEDDED_RENDERER",
+          "name": "COVERING_LETTER",
+          "url": "https://generic-templates.tradetrust.io"
+        },
+        "issuers": [
+          {
+            "name": "Demo Issuer",
+            "documentStore": "0x1D8e1503B0a4A8d1a85fCdD84ED179fa679DDD0e",
+            "identityProof": {
+              "type": "DNS-TXT",
+              "location": "numerous-black-porpoise.sandbox.openattestation.com"
+            }
+          }
+        ],
+        "name": "Covering Letter",
+        "logo": "<Logo URL>",
+        "backgroundColor": "<Background color>",
+        "titleColor": "<Title text color>",
+        "descriptionColor": "<Remarks text color>",
+        "title": "<Default title for the document>",
+        "remarks": "<Default remarks for the document>",
+        "issuer": "<Default issuer for the document>",
+        "issuerLogo": "<Default issuer logo for the document>"
+      },
+      "uiSchema": {
+        "remarks": {
+          "ui:widget": "textarea"
+        }
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Document Title"
+          },
+          "remarks": {
+            "type": "string",
+            "title": "Remarks"
+          },
+          "issuer": {
+            "type": "string",
+            "title": "Issuer"
+          },
+          "issuerLogo": {
+            "type": "string",
+            "title": "Issuer Logo"
+          }
+        }
+      },
+      "attachments": {
+        "allow": true
+      },
+      "extension": "tt",
+      "fileName": "cover-letter-<%= title %>"
+    }
+  ],
+  "documentStorage": {
+    "apiKey": "<Document storage API Key>",
+    "url": "<Document storage URL>"
+  }
+}
